@@ -4,18 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MotDetailActivty">
-
-    <Button
-        android:id="@+id/bSupprimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="72dp"
-        android:text="Supprimer"
-        app:layout_constraintStart_toEndOf="@+id/bAnnuler"
-        app:layout_constraintTop_toBottomOf="@+id/etIndice" />
-
+    tools:context=".MotAddActivity">
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -65,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="136dp"
         android:text="Indice:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -85,8 +74,8 @@
         android:id="@+id/bAnnuler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
         android:text="Retour"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -95,11 +84,11 @@
         android:id="@+id/bModifier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="4dp"
-        android:text="Enregistrer"
+        android:layout_marginTop="68dp"
+        android:text="Ajouter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bSupprimer"
-        app:layout_constraintTop_toBottomOf="@+id/etIndice" />
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toEndOf="@+id/bAnnuler"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

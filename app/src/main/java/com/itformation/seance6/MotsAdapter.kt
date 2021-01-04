@@ -1,5 +1,6 @@
 package com.itformation.seance6
 
+import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -7,13 +8,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MotsAdapter(val clickListener: MotClickListener):RecyclerView.Adapter<MotViewHolder>() {
+class MotsAdapter(val clickListener: MotClickListener,val rp:MotRepository):RecyclerView.Adapter<MotViewHolder>() {
+
    //Source de données
-   private val mots=listOf<Mot>(Mot("Mot1","Type1",33),
+   private var mots=rp.getMots()
+       /*listOf<Mot>(Mot("Mot1","Type1",33),
            Mot("Mot2","Type 2",11),
-           Mot("Mot3","Type 1",12))
+           Mot("Mot3","Type 1",12))*/
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MotViewHolder {
+
         Log.d("SE7","onCreateViewHolder est appelée")
         val layoutInflater =LayoutInflater.from(parent.context)
       val vue=  layoutInflater.inflate(R.layout.mot_layout,parent,false)
@@ -38,6 +42,10 @@ class MotsAdapter(val clickListener: MotClickListener):RecyclerView.Adapter<MotV
     }
 
    */
+
+    fun update (){
+        mots=rp.getMots()
+        notifyDataSetChanged()}
   override fun getItemCount()= mots.size
 
 }
